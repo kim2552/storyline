@@ -1,0 +1,22 @@
+html, body{
+    margin: 0;
+    background-color: $body-bg-color;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    font-family: $font-family;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: $font-family;
+    color: $text-light-color;
+}
+
+a:hover{
+    color: darken($text-light-color,15%);
+}

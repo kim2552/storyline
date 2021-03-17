@@ -1,0 +1,58 @@
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: $header-color;
+
+    .logo{
+        padding: $button-padding-lg;
+    }
+
+    @media only screen and (max-width: 1280px) {
+        .logo{
+            padding: $button-padding-md;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .logo{
+            padding: $button-padding-sm;
+        }
+    }
+}
+
+.navbar-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a{
+        text-decoration: none;
+    }
+
+    .menu-item{
+        padding: $button-margin-lg;
+        color: $text-light-color;
+    }
+
+    .menu-item:hover{
+        background-color: $button-color;
+        border-radius: 1rem;
+        color: $text-light-color;
+    }
+
+    @media screen and (max-width: 1280px) {
+        .menu-item{
+            padding: $button-margin-md;
+        }
+    }
+
+    @media only screen and (max-width: 768px) { //TODO:Create responsive navbar
+        flex-direction: column;
+        justify-content: center;
+
+        .menu-item{
+            padding: $button-margin-sm;
+        }
+    }
+}
