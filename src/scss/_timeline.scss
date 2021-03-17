@@ -1,0 +1,46 @@
+.timeline-container{
+    margin: $container-margin-lg;
+
+    .carousel{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x:auto;
+        justify-content: center;
+    }
+
+    .swiper-wrapper{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .point-wrapper {
+        display: flex;
+        justify-content: center;
+
+        width: 15rem;
+        border-top: 3px solid #455EFC;
+    }
+
+    .point-img{
+        height:1rem;
+        width:1rem;
+    }
+    .point-img:hover{
+        filter: brightness(1.75);
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1280px) {
+        margin: $container-margin-md;
+        .point-wrapper{
+            width: 10rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: $container-margin-sm;
+        .point-wrapper{
+            width: 5rem;
+        }
+    }
+}
