@@ -1,27 +1,76 @@
+.header-wrapper{
+    margin-top: $header-margin-md;
+
+    text-align: center;
+}
+
 .article-gallery-container{
     margin: $container-margin-lg;
+    margin-top: 0;
 
     .carousel{
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        
+
         background-color: $tertiary-color;
+        border-radius: 1rem;
+    }
+
+    .carousel::-webkit-scrollbar{
+        height:0.5rem;
+    }
+    .carousel::-webkit-scrollbar-thumb {
+        background-color: $secondary-color;    /* color of the scroll thumb */
+        border-radius: 5rem;       /* roundness of the scroll thumb */
+    }
+
+
+    a{
+        align-items: flex-end;
     }
 
     .article-wrapper{
+        display: flex;
         flex: 0 0 auto;
-        background-color:cadetblue;
+        flex-direction: column;
+        justify-content: space-between;
+
+        background-color: $primary-color;
 
         margin: $slide-margin-lg;
         padding: $slide-padding-lg;
+        overflow: hidden;
+
+        box-shadow: 0 0 1rem $secondary-color;
+        border-radius: 1rem;
         
         width: 20rem;
         height: 20rem;
     }
 
+    .content{
+        word-wrap: break-word;
+    }
+
+    .button-wrapper{
+        padding: $button-padding-lg;
+        width: 1rem;
+
+        background-color: $button-color;
+        border-radius: 1rem;
+    }
+
+    .button-wrapper:hover{
+        background-color: lighten($button-color,15%);
+        border-radius: 1rem;
+
+        color: $text-light-color;
+    }
+
     @media screen and (max-width: 1280px) {
         margin: $container-margin-md;
+        margin-top: 0;
 
         .article-wrapper{
             margin: $slide-margin-md;
@@ -30,10 +79,15 @@
             width: 20rem;
             height: 20rem;
         }
+
+        .button-wrapper{
+            padding: $button-padding-md;
+        }
     }
 
     @media screen and (max-width: 768px) {
         margin: $container-margin-sm;
+        margin-top: 0;
 
         .article-wrapper{
             margin: $slide-margin-sm;
@@ -41,6 +95,12 @@
             
             width: 15rem;
             height: 15rem;
+        }
+
+        .button-wrapper{
+            padding: $button-padding-sm;
+
+            border-radius: 0.5rem;
         }
     }
 }
