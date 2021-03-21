@@ -13,11 +13,11 @@ export class TimeLine extends Component {
 
     getTimelineElement(){
         const time_periods = []
-        for(const[index, value] of this.time_period_list.entries()){
+        for(const[index, date] of this.time_period_list.entries()){
             time_periods.push(
                 <div className="swiper-wrapper" key={index}>
-                    <p>{value}</p>
-                    <div className="point-wrapper">
+                    <p>{date}</p>
+                    <div className="point-wrapper" onClick={()=>this.props.updateArticleFeed({date})}>
                         <img src={point_img} alt="point" className="point-img"></img>
                     </div>
                 </div>
@@ -26,11 +26,21 @@ export class TimeLine extends Component {
         return time_periods;
     }
 
+    mouseScroll = (e) => {
+        var container = document.getElementById('timeline-carousel')
+        var containerScrollPosition = document.getElementById('timeline-carousel').scrollLeft
+        container.scrollTo({
+            top: 0,
+            left: containerScrollPosition + e.deltaY,
+            behaviour: 'smooth' //if you want smooth scrolling
+        })
+    }
+
     render() {
         const time_periods = this.getTimelineElement();
         return (
         <div className="timeline-container">
-            <div className="carousel">
+            <div className="carousel" id="timeline-carousel" onWheel={(e) =>{this.mouseScroll(e)}}>
                 {time_periods}
             </div>
         </div>
