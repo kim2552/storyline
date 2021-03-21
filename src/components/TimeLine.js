@@ -5,9 +5,10 @@ export class TimeLine extends Component {
     constructor(props){
         super(props);
 
-        this.time_period_list = new Array(20);
+        const currentYear  = new Date().getFullYear();
+        this.time_period_list = new Array(currentYear-2000);
         for(var i=0; i<this.time_period_list.length; i++){
-            this.time_period_list[i] = 2000+i;
+            this.time_period_list[i] = 2001+i;
         }
     }
 
