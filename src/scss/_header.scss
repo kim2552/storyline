@@ -1,6 +1,7 @@
 .header-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
     background-color: $header-color;
 
@@ -27,12 +28,14 @@
     flex-direction: row;
     align-items: center;
 
+    margin: 1rem;
+
     a{
         text-decoration: none;
     }
 
     .menu-item{
-        padding: $button-margin-lg;
+        padding: $button-margin-md;
         color: $text-light-color;
     }
 
