@@ -37,7 +37,6 @@ const Home = () => {
                     }
                 }
                 setArticles(article_items);
-                setYear(date);
             }).catch( error => {
                 console.log(error);
             });
