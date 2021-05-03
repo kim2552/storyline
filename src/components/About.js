@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
     return (
         <div style={{margin:"5rem",marginTop: "1rem"}}>
-            <h1 style={{fontSize: "2rem"}}>World Events Timeline</h1>
+            <h1 style={{fontSize: "2rem"}}>Storyline</h1>
             <p style={{fontSize: "1rem"}}>
                 Travel back in time by looking at articles in the past!
             </p>

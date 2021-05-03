@@ -5,7 +5,7 @@ const Header = () => {
         <div className="header-container">
             <a href="/">
                 <div className="logo">
-                    World Events Timeline
+                    Storyline
                 </div>
             </a>
             <Navbar></Navbar>
