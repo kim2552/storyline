@@ -1,0 +1,10 @@
+[[redirects]]
+    from = "/rss/*"
+    to = "https://news.google.com/rss/"
+    status = 200
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/rss/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
