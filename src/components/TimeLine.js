@@ -18,7 +18,7 @@ export class TimeLine extends Component {
             time_periods.push(
                 <div className="swiper-wrapper" key={index}>
                     <p>{date}</p>
-                    <div className="point-wrapper" onClick={()=>this.props.updateArticleFeed({date})}>
+                    <div className="point-wrapper" onClick={()=>this.props.handleYearChange(date)}>
                         <img src={point_img} alt="point" className="point-img"></img>
                     </div>
                 </div>
