@@ -1,4 +1,0 @@
-[[redirects]]
-    from = "/rss/*"
-    to = "https://news.google.com/rss/"
-    status = 200
