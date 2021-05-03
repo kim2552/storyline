@@ -7,8 +7,8 @@ import KeywordInput from './KeywordInput'
 
 const Home = () => {
 
-    const [year, setYear] = useState("2001");
-    const [search_input, setSearchInput] = useState("world events");
+    const [year, setYear] = useState("2008");
+    const [search_input, setSearchInput] = useState("Taylor Swift");
 
     const [articles,setArticles] = useState([]);
 
@@ -42,11 +42,11 @@ const Home = () => {
     return (
         <div className="container">
             <div className="header-wrapper">
-                <h1>{year}</h1>
+                <h1 style={{fontSize: "2rem"}}>{year}</h1>
             </div>
             <ArticleGallery articles={articles}></ArticleGallery>
             <TimeLine handleYearChange={handleYearChange}></TimeLine>
-            <div className="header-wrapper">
+            <div className="header-wrapper" style={{marginBottom: "1rem"}}>
                 <KeywordInput search_input={search_input} setSearchInput={setSearchInput}></KeywordInput>
             </div>
         </div>
