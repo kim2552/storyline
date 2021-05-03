@@ -15,15 +15,10 @@ const Home = () => {
     function handleYearChange(newDate){
         setYear(newDate);
     }
-    function handleSearchChange(newSearch){
-        console.log("newSearch=",newSearch);
-        setSearchInput(newSearch);
-    }
 
     useEffect(() => {
         const updateArticleFeed = () =>{
             const date = year;
-            console.log(search_input);
             const formatted_search = search_input.replace(/\s+/g, '+').toLowerCase();
             axios.get("/rss/search?q="+formatted_search+" after:"+date+"-01-01+before:"+date+"-12-30&hl=en-US&gl=US&ceid=US:en&gl=US")
             .then(res =>{
@@ -52,7 +47,7 @@ const Home = () => {
             <ArticleGallery articles={articles}></ArticleGallery>
             <TimeLine handleYearChange={handleYearChange}></TimeLine>
             <div className="header-wrapper">
-                <KeywordInput search_input={search_input} setSearchInput={setSearchInput} handleSearchChange={handleSearchChange}></KeywordInput>
+                <KeywordInput search_input={search_input} setSearchInput={setSearchInput}></KeywordInput>
             </div>
         </div>
     )

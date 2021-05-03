@@ -1,20 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const KeywordInput = (props) => {
+
+    const [search, setSearch] = useState(props.search_input);
+
     function handleChange(event){
-        props.setSearchInput(event.target.value);
+        setSearch(event.target.value);
     }
 
     function handleSubmit(event){
         event.preventDefault();
-        props.handleSearchChange(props.search_input);
+        props.setSearchInput(search);
     }
 
     return (
         <div>
             <form onSubmit={handleSubmit}>
                 <label>Keyword Search:</label>
-                <input type="text" id="search" name="search" value={props.search_input} onChange={handleChange}></input>
+                <input type="text" id="search" name="search" value={search} onChange={handleChange}></input>
                 <input type="submit" value="Submit"></input>
             </form>
         </div>

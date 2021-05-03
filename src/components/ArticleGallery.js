@@ -36,7 +36,7 @@ export class ArticleGallery extends Component {
                     {/*<p>{this.props.articles[i].description}</p>*/}
                 </div>
                 <a href={this.props.articles[i].link} rel="noreferrer" target="_blank" className="button-wrapper">
-                    link
+                    Go to the article
                 </a>
             </div>
             );

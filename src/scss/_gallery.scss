@@ -55,10 +55,11 @@
         align-items: flex-end;
 
         padding: 0.5rem;
-        width: 1.5rem;
+        width: 8rem;
         max-height: 1rem;
 
         background-color: $button-color;
+        color: $text-light-color;
         border-radius: 0.5rem;
         text-align: center;
     }
