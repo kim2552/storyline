@@ -15,12 +15,6 @@
             padding: $button-padding-md;
         }
     }
-
-    @media only screen and (max-width: 768px) {
-        .logo{
-            padding: $button-padding-sm;
-        }
-    }
 }
 
 .navbar-wrapper{
