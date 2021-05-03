@@ -1,5 +1,5 @@
 {
-  "name": "world-events-timeline-app",
+  "name": "storyline-app",
   "version": "0.1.0",
   "private": true,
   "proxy": "https://news.google.com",
