@@ -20,7 +20,7 @@ const Home = () => {
         const updateArticleFeed = () =>{
             const date = year;
             const formatted_search = search_input.replace(/\s+/g, '+').toLowerCase();
-            axios.get("/rss/search?q="+formatted_search+" after:"+date+"-01-01+before:"+date+"-12-30&hl=en-US&gl=US&ceid=US:en&gl=US")
+            axios.post("/api/retrieve_feed",{formatted_search,year})
             .then(res =>{
                 const parser = new DOMParser();
                 const xmlDoc = parser.parseFromString(res.request.response, "text/xml");

@@ -1,10 +1,7 @@
-[[redirects]]
-    from = "/rss/*"
-    to = "https://news.google.com/rss/"
-    status = 200
+[build]
+    functions = "server_functions"
 
-[[headers]]
-  # Define which paths this specific [[headers]] block will cover.
-  for = "/rss/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
+[[redirects]]
+    from = "/api/*"
+    to = "/.netlify/functions/:splat"
+    status = 200
