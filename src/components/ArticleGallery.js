@@ -42,6 +42,10 @@ export class ArticleGallery extends Component {
             );
         }
 
+        if(article_display.length == 0){
+            article_display.push(<h1 style={{margin: "auto", marginTop: "10rem", marginBottom: "10rem", color:"white"}}>No articles found.</h1>);
+        }
+
         return (
             <div className="article-gallery-container">
             <div className="carousel" id="article-carousel" onWheel={(e) => this.mouseScroll(e)}>
