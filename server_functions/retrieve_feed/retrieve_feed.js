@@ -7,7 +7,6 @@ const handler = async (event) => {
     let xml_data = null;
     await axios.get("https://news.google.com/rss/search?q="+data.formatted_search+" after:"+data.year+"-01-01+before:"+data.year+"-12-30&hl=en-US&gl=US&ceid=US:en&gl=US")
     .then(res =>{
-      console.log(res.data);
       xml_data = res.data;
     }).catch( error => {
         console.log(error);
