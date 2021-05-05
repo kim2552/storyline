@@ -42,8 +42,8 @@ export class ArticleGallery extends Component {
             );
         }
 
-        if(article_display.length == 0){
-            article_display.push(<h1 style={{margin: "auto", marginTop: "10rem", marginBottom: "10rem", color:"white"}}>No articles found.</h1>);
+        if(article_display.length === 0){
+            article_display.push(<h1 key={1} style={{margin: "auto", marginTop: "10rem", marginBottom: "10rem", color:"white"}}>No articles found.</h1>);
         }
 
         return (
