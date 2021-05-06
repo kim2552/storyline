@@ -7,8 +7,19 @@ import KeywordInput from './KeywordInput'
 
 const Home = () => {
 
-    const [year, setYear] = useState("2008");
-    const [search_input, setSearchInput] = useState("Taylor Swift");
+    const saved_query = JSON.parse(localStorage.getItem('query'));
+
+    let default_year = "2008";
+    let default_search = "Taylor Swift"
+    if(saved_query !== null){
+        if(saved_query.year !== ""){
+            default_year = saved_query.year;
+            default_search = saved_query.search;
+        }
+    }
+
+    const [year, setYear] = useState(default_year);
+    const [search_input, setSearchInput] = useState(default_search);
 
     const [articles,setArticles] = useState([]);
 
@@ -18,6 +29,8 @@ const Home = () => {
 
     useEffect(() => {
         const updateArticleFeed = () =>{
+            localStorage.setItem('query', JSON.stringify({search: search_input, year: year}));
+
             const date = year;
             const formatted_search = search_input.replace(/\s+/g, '+').toLowerCase();
             axios.post("/api/retrieve_feed",{formatted_search,year})
